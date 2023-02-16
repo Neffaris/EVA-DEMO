@@ -10,7 +10,7 @@ PL:
 
 O EVA:
 
-Program EVA rozwijam w wolnym czasie jako sposób na uczenie się języka Python. Program ma z założenia wspierać mnie w pracy z komputerem. Ma dostaraczać funkcję które wykorzystuję w pracy i w życiu codziennym niezależnie od tego czy uruchomię go w systemie Linux, Windows czy Mac oraz niezależnie od tego w jakim środowisku graficznym program działa i jakiego "terminala" używamy w systemie(dotyczy to w szczególności linuxów i dużej ilości różnych terminali i środowisk graficznych). EVA ma być też z założenia prosta w instalacji na każdym systemie operacyjnym(nad czym jeszcze pracuję) oraz ma posiadać możliwie niskie wymagania do uruchomienia nawet na bardzo starym sprzęcie.
+Program EVA rozwijam w wolnym czasie jako sposób na uczenie się języka Python. Program ma z założenia wspierać mnie w pracy z komputerem. Ma dostarczać funkcję które wykorzystuję w pracy i w życiu codziennym niezależnie od tego czy uruchomię go w systemie Linux, Windows czy Mac oraz niezależnie od tego w jakim środowisku graficznym program działa i jakiego "terminala" używamy w systemie(dotyczy to w szczególności linuxów i dużej ilości różnych terminali i środowisk graficznych). EVA ma być też z założenia prosta w instalacji na każdym systemie operacyjnym(nad czym jeszcze pracuję) oraz ma posiadać możliwie niskie wymagania do uruchomienia nawet na bardzo starym sprzęcie.
 
 Proces instalacji:
 
