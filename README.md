@@ -20,8 +20,6 @@ Do ich instalacji polecam użyć systemu zarządzania pakietami "pip"
 
 Jeśli używasz Linuxa z rodziny Debian wymagane będzie zainstalowanie dodatkowych pakietów. Możesz użyć gotowego skryptu: "debian_requirements.txt" aby zainstalować wymagane pakiety
 
-Oprócz tego należy wrzucić plik "test_sound.wav" do nowo stworzonego folderu "eva_sounds"
-
 Aby uruchomić program użyj polecenia "python3/python main_core.py"
 
 ENG:
@@ -37,7 +35,5 @@ All additional required packages names are listed in "requirements.txt"
 I recommend using the "pip" package management system to install them
 
 If you are using Debian Linux you will need to install additional packages. You can use the script: "debian_requirements.txt" to install required packages
-
-In addition, you should put the file "test_sound.wav" into the newly created folder "eva_sounds"
 
 To run program use "python3/python main_core.py" command
