@@ -1,0 +1,1 @@
+sudo apt-get install espeak -y && sudo apt-get install python3-pyaudio -y && sudo apt-get install python3-tk -y && sudo apt-get install python3-dev -y && sudo pip3 install --upgrade psutil

@@ -1,0 +1,6 @@
+pyttsx3
+pyautogui
+SpeechRecognition
+stdiomask
+preferredsoundplayer
+psutil
