@@ -18,7 +18,7 @@ Nazwy pakietów wymaganych do poprawnego działania programu znajdują się w pl
 
 Do ich instalacji polecam użyć systemu zarządzania pakietami "pip"
 
-Jeśli używasz Linuxa z rodziny Debian wymagane będzie zainstalowanie dodatkowych pakietów. Możesz użyć polecenia: "debian_requirements.txt" aby zainstallować wymagane pakiety
+Jeśli używasz Linuxa z rodziny Debian wymagane będzie zainstalowanie dodatkowych pakietów. Możesz użyć skryptu: "debian_requirements.txt" aby zainstallować wymagane pakiety
 
 Aby uruchomić program użyj polecenia "python3/python main_core.py
 
