@@ -8,7 +8,7 @@ Program jest aktualnie dostępny tylko w polskiej wersji językowej
 
 PL:
 
-Wszystkie wymagane pakiety dodatkowe potrzebne do uruchomienia programu są rozpisane w pliku "requirements.txt"
+Nazwy pakietów wymaganych do poprawnego działania programu znajdują się w pliku "requirements.txt"
 
 Jeśli używasz Linuxa z rodziny Debian możesz użyć skryptu "debian_requirements.txt" aby zainstallować dodatkowe wymagane pakiety
 
