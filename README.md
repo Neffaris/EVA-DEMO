@@ -20,7 +20,7 @@ Do ich instalacji polecam użyć systemu zarządzania pakietami "pip"
 
 Jeśli używasz Linuxa z rodziny Debian wymagane będzie zainstalowanie dodatkowych pakietów. Możesz użyć skryptu: "debian_requirements.txt" aby zainstallować wymagane pakiety
 
-Aby uruchomić program użyj polecenia "python3/python main_core.py
+Aby uruchomić program użyj polecenia "python3/python main_core.py"
 
 ENG:
 
