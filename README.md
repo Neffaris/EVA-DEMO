@@ -5,6 +5,7 @@
 The program is currently available only in the Polish language version
 
 Program jest aktualnie dostępny tylko w polskiej wersji językowej
+
 PL:
 Wszystkie wymagane pakiety dodatkowe potrzebne do uruchomienia programu są rozpisane w pliku "requirements.txt"
 
