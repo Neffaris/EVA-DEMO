@@ -10,7 +10,7 @@ PL:
 
 O EVA:
 
-Program EVA rozwijam w wolnym czasie jako sposób na uczenie się języka Python. Program ma z założenia wspierać mnie w pracy z komputerem. Ma dostarczać funkcję które wykorzystuję w pracy i w życiu codziennym niezależnie od tego czy uruchomię go w systemie Linux, Windows czy Mac oraz niezależnie od tego w jakim środowisku graficznym system działa i jakiego "terminala" używamy w systemie(dotyczy to w szczególności linuxów i dużej ilości różnych terminali i środowisk graficznych). EVA ma być też z założenia prosta w instalacji na każdym systemie operacyjnym(nad czym jeszcze pracuję) oraz ma posiadać możliwie niskie wymagania do uruchomienia nawet na bardzo starym sprzęcie.
+Program EVA rozwijam w wolnym czasie jako sposób na uczenie się języka Python. Program ma z założenia wspierać mnie w pracy z komputerem. Ma dostarczać funkcje które wykorzystuję w pracy i w życiu codziennym niezależnie od tego czy uruchomię go w systemie Linux, Windows czy Mac oraz niezależnie od tego w jakim środowisku graficznym system działa i jakiego "terminala" używamy w systemie(dotyczy to w szczególności linuxów i dużej ilości różnych terminali i środowisk graficznych). EVA ma być też z założenia prosta w instalacji na każdym systemie operacyjnym(nad czym jeszcze pracuję) oraz ma posiadać możliwie niskie wymagania do uruchomienia nawet na bardzo starym sprzęcie.
 
 Proces instalacji:
 
@@ -18,7 +18,7 @@ Nazwy pakietów wymaganych do poprawnego działania programu znajdują się w pl
 
 Do ich instalacji polecam użyć systemu zarządzania pakietami "pip"
 
-Jeśli używasz Linuxa z rodziny Debian wymagane będzie zainstalowanie dodatkowych pakietów. Możesz użyć gotowego skryptu: "debian_requirements.txt" aby zainstallować wymagane pakiety
+Jeśli używasz Linuxa z rodziny Debian wymagane będzie zainstalowanie dodatkowych pakietów. Możesz użyć gotowego skryptu: "debian_requirements.txt" aby zainstalować wymagane pakiety
 
 Aby uruchomić program użyj polecenia "python3/python main_core.py"
 
