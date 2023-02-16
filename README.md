@@ -24,6 +24,8 @@ Oprócz tego należy wrzucić plik "test_sound.wav" do folderu "eva_sounds"
 
 Aby uruchomić program użyj polecenia "python3/python main_core.py"
 
+Domyślny login to "lumos" a hasło "maxima"
+
 ENG:
 
 About EVA:
@@ -41,3 +43,5 @@ If you are using Debian Linux you will need to install additional packages. You 
 In addition, you should put the file "test_sound.wav" into the newly created folder "eva_sounds"
 
 To run program use "python3/python main_core.py" command
+
+The default login is "lumos" and the password is "maxima"
