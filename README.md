@@ -1,5 +1,5 @@
 # EVA
-
+The Electronic Video Agent (EVA)
 
 
 The program is currently available only in the Polish language version
@@ -10,7 +10,7 @@ PL:
 
 O EVA:
 
-Program EVA rozwijam w wolnym czasie jako sposób na uczenie się języka Python. Program ma z założenia wspierać mnie w pracy z komputerem. Ma dostarczać funkcje które wykorzystuję w pracy i w życiu codziennym niezależnie od tego czy uruchomię go w systemie Linux, Windows czy Mac oraz niezależnie od tego w jakim środowisku graficznym system działa i jakiego "terminala" używamy w systemie(dotyczy to w szczególności linuxów i ich dużej ilości różnych terminali i środowisk graficznych). EVA ma być też z założenia prosta w instalacji na każdym systemie operacyjnym(nad czym jeszcze pracuję) oraz ma posiadać możliwie niskie wymagania do uruchomienia nawet na bardzo starym sprzęcie.
+Program EVA rozwijam w wolnym czasie jako sposób na uczenie się języka Python. Program ma z założenia wspierać mnie w pracy z komputerem. Ma dostarczać funkcje które wykorzystuję w pracy i w życiu codziennym niezależnie od tego czy uruchomię go w systemie Linux, Windows czy Mac oraz niezależnie od tego w jakim środowisku graficznym system działa i jakiego "terminala" używam w systemie(dotyczy to w szczególności linuxów i ich dużej ilości różnych terminali i środowisk graficznych). EVA ma być też z założenia prosta w instalacji na każdym systemie operacyjnym(nad czym jeszcze pracuję) oraz ma posiadać możliwie niskie wymagania do uruchomienia nawet na bardzo starym sprzęcie.
 
 Proces instalacji:
 
