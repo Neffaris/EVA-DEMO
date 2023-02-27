@@ -36,7 +36,7 @@ I develop the EVA program in my spare time as a way to learn Python. The program
 
 The inspiration to create EVA was the program shown in the War Games movie from 1983 and the Command & Conquer series of games from which I took the name EVA (The Electronic Video Agent)
 
-In the future, I would like to rebuild the program to use machine learning algorithms, but as I mentioned, I develop the program in my free time out of pure fun and for scientific purposes and I may stop developing it
+In the future, I would like to rebuild the program to use machine learning algorithms, but as I mentioned, I develop the program in my free time out of pure fun and for scientific purposes and it is possible that i stop developing him
 
 Installation process:
 
