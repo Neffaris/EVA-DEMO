@@ -14,7 +14,7 @@ Program EVA rozwijam w wolnym czasie jako sposób na uczenie się języka Python
 
 Inspiracją do stworzenia EVA był program ukazany w filmie Gry Wojenne z 1983 oraz seria gier Command & Conquer z której zaczerpnąłem nazwę EVA(The Electronic Video Agent)
 
-W przyszłości chciałbym przebudować program aby wykorzystywał algorytmy uczenia maszynowego ale jak już wspomniałem program rozwijam w wolnym czasie z czystej zajawki i w celach naukowych
+W przyszłości chciałbym przebudować program aby wykorzystywał algorytmy uczenia maszynowego ale jak już wspomniałem program rozwijam w wolnym czasie z czystej zajawki i w celach naukowych i możliwe, że przestanę go rozwijać
 
 Proces instalacji:
 
@@ -36,7 +36,7 @@ I develop the EVA program in my spare time as a way to learn Python. The program
 
 The inspiration to create EVA was the program shown in the War Games movie from 1983 and the Command & Conquer series of games from which I took the name EVA (The Electronic Video Agent)
 
-In the future, I would like to rebuild the program to use machine learning algorithms, but as I mentioned, I develop the program in my free time out of pure fun and for scientific purposes
+In the future, I would like to rebuild the program to use machine learning algorithms, but as I mentioned, I develop the program in my free time out of pure fun and for scientific purposes and I may stop developing it
 
 Installation process:
 
