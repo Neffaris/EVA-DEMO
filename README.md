@@ -10,7 +10,7 @@ PL:
 
 O EVA:
 
-Program EVA rozwijam w wolnym czasie jako sposób na uczenie się języka Python. Program ma z założenia wspierać mnie w pracy z komputerem. Ma dostarczać różnego rodzaju funkcje niezależnie od tego czy uruchomię go w systemie Linux, Windows czy Mac oraz niezależnie od tego w jakim środowisku graficznym system działa i jakiego "terminala" używam w systemie(dotyczy to w szczególności linuxów i ich dużej ilości różnych terminali i środowisk graficznych). Innymi słowy ma rozwiązywać problem EVA ma być też z założenia prosta w instalacji na każdym systemie operacyjnym(nad czym jeszcze pracuję) oraz ma posiadać możliwie niskie wymagania do uruchomienia nawet na bardzo starym sprzęcie.
+Program EVA rozwijam w wolnym czasie jako sposób na uczenie się języka Python. Program ma z założenia wspierać mnie w pracy z komputerem. Ma dostarczać różnego rodzaju funkcje niezależnie od tego czy uruchomię go w systemie Linux, Windows czy Mac oraz niezależnie od tego w jakim środowisku graficznym system działa i jakiego "terminala" używamy w systemie(dotyczy to w szczególności linuxów i ich dużej ilości różnych terminali i środowisk graficznych). EVA ma być też z założenia prosta w instalacji na każdym systemie operacyjnym(nad czym jeszcze pracuję) oraz ma posiadać możliwie niskie wymagania do uruchomienia nawet na bardzo starym sprzęcie.
 
 Inspiracją do stworzenia EVA był program ukazany w filmie Gry Wojenne z 1983 oraz seria gier Command & Conquer z której zaczerpnąłem nazwę EVA(The Electronic Video Agent)
 
@@ -36,7 +36,7 @@ I develop the EVA program in my spare time as a way to learn Python. The program
 
 The inspiration to create EVA was the program shown in the War Games movie from 1983 and the Command & Conquer series of games from which I took the name EVA (The Electronic Video Agent)
 
-In the future, I would like to rebuild the program to use machine learning algorithms, but as I mentioned, I develop the program in my free time out of pure fun and for scientific purposes and it is possible that i stop developing him
+In the future, I would like to rebuild the program to use machine learning algorithms, but as I mentioned, I develop the program in my free time for fun and for scientific purposes. So it is possible that i stop developing it
 
 Installation process:
 
