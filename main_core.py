@@ -462,6 +462,7 @@ def eva_main_core(user):
                     hexchat_handler.start()
                 if platform.system() == "Windows":
                     system("")
+            #elif
             elif command == "help" or command == "pomoc" or command == "Pomoc":  # WYŚWIETLA LISTĘ POLECEŃ
                 #sound_command(True)
                 print("")
@@ -514,7 +515,6 @@ def eva_main_core(user):
                 print ("\033[A                             \033[A") # USUWA LINIJKĘ TEKSTU TERMINALA WYŚWIETLAJĄCĄ CZAS I DATĘ
                 print ("\033[A                             \033[A") # USUWA PUSTĄ LINIJKĘ
                 print ("\033[A                             \033[A") # USUWA OSTATNIĄ LINIJKĘ TEKSTU TERMINALA TZN: "(user >|)"
-            #elif
             else :  # ELSE
                 if is_listening == True: # SPRAWDZA CZY POLECENIE GŁOSOWE JEST POPRAWNE
                     sound_command(False)
