@@ -245,12 +245,6 @@ def eva_main_core(user):
                         system("calc.exe")
                 calc_handler  = threading.Thread(target=calc, args=())
                 calc_handler.start()
-            elif command == "co tam u ciebie":
-                print(" EVA: Wszystko dobrze, dziękuję :)")
-                if engine == pyttsx3.init():
-                    engine.say("Wszystko dobrze, dziękuję")
-                    engine.runAndWait()
-                continue
             elif command == "whoami" or command == "kim jestem" or command == "Kto jest zalogowany":  # WYŚWIETLA AKTUALNEGO UŻYTKOWNIKA EVA
                 # print("")
                 print(" EVA: Zalogowany jako: '", user, "'")
