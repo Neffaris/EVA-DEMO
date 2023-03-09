@@ -10,7 +10,7 @@ PL:
 
 O EVA:
 
-Program EVA rozwijam w wolnym czasie jako sposób na uczenie się języka Python. Program ma z założenia wspierać mnie w pracy z komputerem. Ma dostarczać różnego rodzaju funkcje niezależnie od tego czy uruchomię go w systemie Linux, Windows czy Mac oraz niezależnie od tego w jakim środowisku graficznym system działa i jakiego "terminala" używamy w systemie(dotyczy to w szczególności linuxów i ich dużej ilości różnych emulatorów terminali. Dzięki EVA nie musimy pamiętać np: czy mamy zainstalowany xfce4-terminal, termionator'a czy np: gnome-terminal. Wystarczy nam znać jedno polecenie - "term"). EVA ma być też z założenia prosta w instalacji na każdym systemie operacyjnym(nad czym jeszcze pracuję) oraz ma posiadać możliwie niskie wymagania do uruchomienia nawet na bardzo starym sprzęcie.
+Program EVA rozwijam w wolnym czasie jako sposób na uczenie się języka Python. Program ma z założenia wspierać mnie w pracy z komputerem. Ma dostarczać różnego rodzaju funkcje niezależnie od tego czy uruchomię go w systemie Linux, Windows czy Mac oraz niezależnie od tego w jakim środowisku graficznym system działa i jakiego "terminala" używamy w systemie(dotyczy to w szczególności linuxów i ich dużej ilości różnych emulatorów terminali. Dzięki EVA nie musimy pamiętać np: czy mamy zainstalowany xfce4-terminal, termionator czy np: gnome-terminal. Wystarczy nam znać jedno polecenie - "term"). EVA ma być też z założenia prosta w instalacji na każdym systemie operacyjnym(nad czym jeszcze pracuję) oraz ma posiadać możliwie niskie wymagania do uruchomienia nawet na bardzo starym sprzęcie.
 
 Inspiracją do stworzenia EVA był program ukazany w filmie Gry Wojenne z 1983, gra Uplink(gra o pracy jako tajny agent/haker) z 2001 oraz seria gier Command & Conquer z której zaczerpnąłem nazwę EVA(The Electronic Video Agent)
 
@@ -22,7 +22,7 @@ Nazwy pakietów wymaganych do poprawnego działania programu znajdują się w pl
 
 Do ich instalacji polecam użyć systemu zarządzania pakietami "pip"
 
-Jeśli używasz Linuxa z rodziny Debian wymagane będzie zainstalowanie dodatkowych pakietów. Możesz użyć gotowego skryptu: "debian_requirements.txt" aby zainstalować wymagane pakiety
+Jeśli używasz Linuxa z rodziny Debian lub Ubuntu wymagane będzie zainstalowanie dodatkowych pakietów. Możesz użyć gotowego skryptu: "debian_requirements.txt" aby zainstalować wymagane pakiety
 
 Aby uruchomić program użyj polecenia "python3/python main_core.py"
 
@@ -44,7 +44,7 @@ All additional required packages names are listed in "requirements.txt"
 
 I recommend using the "pip" package management system to install them
 
-If you are using Debian Linux you will need to install additional packages. You can use the script: "debian_requirements.txt" to install required packages
+If you are using Linux from Debian or Ubuntu family you will need to install additional packages. You can use the script: "debian_requirements.txt" to install required packages
 
 To run program use "python3/python main_core.py" command
 
