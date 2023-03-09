@@ -306,15 +306,17 @@ def eva_main_core(user):
                         engine.say("Uruchamiam mapy gogle w trybie incongito")
                         engine.runAndWait()
                     if platform.system() == "Windows":
-                        _runBrowserCommand = 'start firefox.exe -private-window www.google.com/maps >> "J:\code\python\EVA\MAIN_CORE\firefox_log_file.txt" > nul 2>&1'
-                        process = subprocess.Popen(_runBrowserCommand, shell=True, stdout=subprocess.PIPE)
+                        _runBrowserCommand1 = 'start firefox.exe -private-window www.google.com/maps > nul 2>&1'
+                        process = subprocess.Popen(_runBrowserCommand1, shell=True, stdout=subprocess.PIPE)
                         process.wait()
                         _returnCode = process.returncode
                         if (_returnCode == 0):
                             pass
-                            # system('firefox.exe www.google.com/maps -private-window >> "J:\code\python\EVA\MAIN_CORE\firefox_log_file.txt" > nul 2>&1')
                         if (_returnCode == 1):
-                            system("start chrome.exe www.google.com\maps --incognito")
+                            _runBrowserCommand1 = 'start chrome.exe www.google.com\maps --incognito'
+                            process = subprocess.Popen(_runBrowserCommand1, shell=True, stdout=subprocess.PIPE)
+                            process.wait()
+                            _returnCode = process.returncode
                     if platform.system() == "Linux":
                         system('chromium-browser www.google.com/maps --incognito > /dev/null 2>&1||firefox -private-window www.google.com/maps > /dev/null 2>&1')
                 gmap_handler = threading.Thread(target=start_gmap)
@@ -339,7 +341,7 @@ def eva_main_core(user):
                 )
                 if platform.system() == "Linux":
                     process = subprocess.Popen(
-                            "xfce4-terminal --execute python3 server_irc.py", "exo-open --launch TerminalEmulator python3 client_irc.py", #dodać reszte terminali
+                            "xfce4-terminal --execute python3 server_irc.py", "exo-open --launch TerminalEmulator python3 server_irc.py", #dodać reszte terminali
                             stdout=subprocess.PIPE,
                             stderr=None,
                             shell=True
@@ -396,6 +398,7 @@ def eva_main_core(user):
                 #
                 print(" EVA: Od teraz będę używać głosu")
                 print(" EVA: jeśli mnie nie słyszysz to nie moja wina")
+                print(" EVA: UWAGA! Uruchomiony syntezator mowy spowalnia moje działanie")
                 engine.say("Od teraz będę używać głosu,  jeśli mnie nie słyszysz to nie moja wina")
                 engine.runAndWait()
             elif command == "desynth": # DEZAKTYWUJE SYNTEZATOR MOWY EVA
@@ -417,7 +420,7 @@ def eva_main_core(user):
                         engine.say("Nie mogę uzyskać adresu IP")
                         engine.say("Sprawdź ustawienia sieci")
                         engine.runAndWait()
-            elif command == "monit": # URUCHAMIA PROGRAMU NETSTAT.EXE
+            elif command == "monit": # URUCHAMIA MONITOR POŁĄCZEŃ EVA
                 print(" EVA: Uruchamiam monitor połączeń EVA")
                 if engine == pyttsx3.init():
                     engine.say("Uruchamiam monitor połączeń ewa")
@@ -485,7 +488,7 @@ def eva_main_core(user):
                 print(" DOTYCZĄCE SIECI:")
                 print("     lip - Wyświetla lokalny adres IP")
                 print("     pip - Wyświetla publiczny adres IP")
-                print("     monit - uruchamia Monitor Połączeń EVA (Aktualnie działa tylko w systemie Windows)")
+                print("     monit - uruchamia Monitor Połączeń EVA (Aktualnie działa tylko w systemie Windows)") #TODO - Sprawdzić czy działa na Linuxach
                 print("     ircs - Uruchamia program 'EVA SAFE IRC SERVER'")
                 print("     ircc - Uruchamia program 'EVA SAFE IRC CLIENT'")
                 print(" DOTYCZĄCE SYSTEMU:")
