@@ -1,10 +1,3 @@
-from ast import match_case
-from concurrent.futures import process
-# from distutils import cmd
-from unittest import case
-
-from psutil import Popen
-
 from requests import get
 
 import system_login_screen
@@ -20,8 +13,8 @@ from datetime import datetime
 from datetime import date
 from preferredsoundplayer import playsound
 
-
 def eva_main_core(user):
+
     try:
         def show_time_and_date():
             now = datetime.now()
@@ -29,8 +22,8 @@ def eva_main_core(user):
             current_time = now.strftime("%H:%M:%S")
             print("  Czas:", current_time,"|", today)
 
-        engine = 0 # Text-to-Speech
-        is_listening = False # Speech Recognition
+        engine = 0 # Dotyczy Text-to-Speech
+        is_listening = False # Dotyczy Speech Recognition
 
         waiting_for_a_command = True
         while waiting_for_a_command is True:
@@ -245,7 +238,13 @@ def eva_main_core(user):
                         system("calc.exe")
                 calc_handler  = threading.Thread(target=calc, args=())
                 calc_handler.start()
-            elif command == "whoami" or command == "kim jestem" or command == "Kto jest zalogowany":  # WYŚWIETLA AKTUALNEGO UŻYTKOWNIKA EVA
+            elif command == "co tam u ciebie":
+                print(" EVA: Wszystko dobrze, dziękuję :)")
+                if engine == pyttsx3.init():
+                    engine.say("Wszystko dobrze, dziękuję")
+                    engine.runAndWait()
+                continue
+            elif command == "whoami":  # WYŚWIETLA AKTUALNEGO UŻYTKOWNIKA EVA
                 # print("")
                 print(" EVA: Zalogowany jako: '", user, "'")
                 continue
@@ -307,7 +306,15 @@ def eva_main_core(user):
                         engine.say("Uruchamiam mapy gogle w trybie incongito")
                         engine.runAndWait()
                     if platform.system() == "Windows":
-                        system('start firefox.exe www.google.com/maps -private-window >> "J:\code\python\EVA\MAIN_CORE\firefox_log_file.txt" > nul 2>&1||start chrome.exe www.google.com\maps --incognito')
+                        _runBrowserCommand = 'start firefox.exe -private-window www.google.com/maps >> "J:\code\python\EVA\MAIN_CORE\firefox_log_file.txt" > nul 2>&1'
+                        process = subprocess.Popen(_runBrowserCommand, shell=True, stdout=subprocess.PIPE)
+                        process.wait()
+                        _returnCode = process.returncode
+                        if (_returnCode == 0):
+                            pass
+                            # system('firefox.exe www.google.com/maps -private-window >> "J:\code\python\EVA\MAIN_CORE\firefox_log_file.txt" > nul 2>&1')
+                        if (_returnCode == 1):
+                            system("start chrome.exe www.google.com\maps --incognito")
                     if platform.system() == "Linux":
                         system('chromium-browser www.google.com/maps --incognito > /dev/null 2>&1||firefox -private-window www.google.com/maps > /dev/null 2>&1')
                 gmap_handler = threading.Thread(target=start_gmap)
@@ -372,7 +379,7 @@ def eva_main_core(user):
                     system('xfce4-terminal > /dev/null 2>&1 || exo-open --launch TerminalEmulator > /dev/null 2>&1')
                 print(" SYSTEM: ")
                 term()
-            elif command == "lname": # WYŚWIETLANIE NAZWY HOSTA
+            elif command == "lname": # WYŚWIETLA NAZWĘ HOSTA
                 import socket
                 hostname=socket.gethostname()
                 print(" EVA: Nazwa tego komputera to: " + hostname)
@@ -445,18 +452,17 @@ def eva_main_core(user):
                     engine.runAndWait()
                 sound_handler = threading.Thread(target=playsound, args=('eva_sounds/sound_test.wav',))
                 sound_handler.start()
-            elif command == "hex":
-                print("EVA: Uruchamiam program HexChat")
-                if engine == pyttsx3.init():
-                    engine.say("Uruchamiam program Heks Czat")
-                if platform.system() == "Linux":
-                    def start_hexchat():
-                        system("hexchat")
-                    hexchat_handler = threading.Thread(target=start_hexchat)
-                    hexchat_handler.start()
-                if platform.system() == "Windows":
-                    system("")
-            #elif
+            # elif command == "hex":
+            #     print("EVA: Uruchamiam program HexChat")
+            #     if engine == pyttsx3.init():
+            #         engine.say("Uruchamiam program Heks Czat")
+            #     if platform.system() == "Linux":
+            #         def start_hexchat():
+            #             system("hexchat")
+            #         hexchat_handler = threading.Thread(target=start_hexchat)
+            #         hexchat_handler.start()
+            #     if platform.system() == "Windows":
+            #         system("")
             elif command == "help" or command == "pomoc" or command == "Pomoc":  # WYŚWIETLA LISTĘ POLECEŃ
                 #sound_command(True)
                 print("")
@@ -487,16 +493,16 @@ def eva_main_core(user):
                 print("     sinfo - Wyświela informacje o systemie")
                 print("     cmd - Uruchamia interpreter poleceń systemu Windows")
                 print("     term - Uruchamia terminal systemu Linux")
-                print("     taskm - Uruchamia menedżer zadań (Aktualnie działa tylko w systemie Windows)")
+                print("     taskm - Uruchamia menedżer zadań (Aktualnie działa tylko w systemie Windows)") #TODO - Dodać obsługę windowsa
                 print(" INNE PROGRAMY:")
                 print("     note/notatnik - Uruchamia edytor tekstu")
                 print("     calc - Uruchamia kalkulator")
-                print("     hex - Uruchamia program HexChat") #Dodać obsługę windowsa
+                # print("     hex - Uruchamia program HexChat") #TODO - Dodać obsługę windowsa
                 print("     chrome - Uruchamia program 'Google Chrome'")
                 print("              dodaj parametr '-i' aby uruchomić w trybie incognito")
                 print("     firefox - Uruchamia program 'Firefox'")
                 print("              dodaj parametr '-i' aby uruchomić w trybie incognito")
-                print("     map - Uruchamia mapy google w przeglądarce w trybie incognito") #Dodać obsługę innych przeglądarek
+                print("     map - Uruchamia mapy google w przeglądarce w trybie incognito") #TODO - Dodać obsługę innych przeglądarek
                 print("")
                 continue
             elif command == "ver":  # WYŚWIETLA WERSJĘ EVA MAIN CORE
@@ -509,6 +515,7 @@ def eva_main_core(user):
                 print ("\033[A                             \033[A") # USUWA LINIJKĘ TEKSTU TERMINALA WYŚWIETLAJĄCĄ CZAS I DATĘ
                 print ("\033[A                             \033[A") # USUWA PUSTĄ LINIJKĘ
                 print ("\033[A                             \033[A") # USUWA OSTATNIĄ LINIJKĘ TEKSTU TERMINALA TZN: "(user >|)"
+            #elif
             else :  # ELSE
                 if is_listening == True: # SPRAWDZA CZY POLECENIE GŁOSOWE JEST POPRAWNE
                     sound_command(False)
