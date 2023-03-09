@@ -20,7 +20,7 @@ from datetime import datetime
 from datetime import date
 from preferredsoundplayer import playsound
 
-#  EVA RDZEŃ GŁÓWNY
+
 def eva_main_core(user):
     try:
         def show_time_and_date():
