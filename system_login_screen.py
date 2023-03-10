@@ -9,7 +9,6 @@ def system_load():
     def cls():
         system('cls||clear')
 
-    #  SYSTEM LOGOWANIA
     print("")
     print("")
     print(" ----------EVA MAIN CORE TERMINAL----------")

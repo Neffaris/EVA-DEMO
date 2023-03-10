@@ -13,7 +13,7 @@ from datetime import datetime
 from datetime import date
 from preferredsoundplayer import playsound
 
-def evaMainCore(user):
+def eva_main_core(user):
 
     try:
         def show_time_and_date():
@@ -215,8 +215,7 @@ def evaMainCore(user):
                 if engine == pyttsx3.init():
                     engine.say("Uruchamiam edytor tekstu")
                     engine.runAndWait()
-                print(" SYSTEM: ")
-                def notepad():
+                def run_notepad():
                     if platform.system() == "Windows":
                         system("notepad.exe")
                     if platform.system() == "Linux":
@@ -224,7 +223,7 @@ def evaMainCore(user):
                     # MAC OS
                     # if platform.system() == "Darwin":
                     #     system()
-                notepad_handler = threading.Thread(target=notepad, args=())
+                notepad_handler = threading.Thread(target=run_notepad, args=())
                 notepad_handler.start()
                 continue
             elif command == "calc" or command == "Calc" or command == "Kalkulator" or command == "kalkulator": # URUCHAMIA KALKULATOR
@@ -238,12 +237,6 @@ def evaMainCore(user):
                         system("calc.exe")
                 calc_handler  = threading.Thread(target=calc, args=())
                 calc_handler.start()
-            elif command == "co tam u ciebie":
-                print(" EVA: Wszystko dobrze, dziękuję :)")
-                if engine == pyttsx3.init():
-                    engine.say("Wszystko dobrze, dziękuję")
-                    engine.runAndWait()
-                continue
             elif command == "whoami":  # WYŚWIETLA AKTUALNEGO UŻYTKOWNIKA EVA
                 # print("")
                 print(" EVA: Zalogowany jako: '", user, "'")
@@ -513,7 +506,7 @@ def evaMainCore(user):
             elif command == "ver":  # WYŚWIETLA WERSJĘ EVA MAIN CORE
                 print("")
                 print(" EVA: EVA MAIN CORE")
-                print(" EVA: Wersja/Version: 1.0/05.10.2022/LINUX/WINDOWS")
+                print(" EVA: Wersja/Version: 1.0\LINUX/WINDOWS")
                 print("")
                 continue
             elif command == "": # USUNĄĆ JEŚLI SPRAWIA PROBLEMY
@@ -539,7 +532,7 @@ def evaMainCore(user):
         print(" EVA: Wystąpił problem z rozpoznawaniem dźwięku (TypeError)")
         engine.say("Wystąpił problem z rozpoznawaniem dźwięku")
         engine.runAndWait()
-        evaMainCore(user)
+        eva_main_core(user)
     except KeyboardInterrupt:
         print("")
         print(" EVA: Znikam. Użyto Ctrl + C")
