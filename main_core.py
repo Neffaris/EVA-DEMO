@@ -13,7 +13,7 @@ from datetime import datetime
 from datetime import date
 from preferredsoundplayer import playsound
 
-def eva_main_core(user):
+def evaMainCore(user):
 
     try:
         def show_time_and_date():
@@ -177,7 +177,7 @@ def eva_main_core(user):
                                         break
                         else:
                             pass
-                    def voice_recognizer():
+                    def run_voice_recognizer():
                         loop_checker = 2
                         while loop_checker > 1:
                             txt = get_text()
@@ -197,7 +197,7 @@ def eva_main_core(user):
                                         engine.say("proszę powtórzyć")
                                         engine.runAndWait()
                                     loop_checker = 2
-                    voice_recognizer()
+                    run_voice_recognizer()
                 except KeyboardInterrupt:
                     print(" EVA: Przestaje słuchać. Użyto Ctrl + C")
                     time.sleep(1)
@@ -257,38 +257,38 @@ def eva_main_core(user):
                     engine.say("Uruchamiam program google chrome")
                     engine.runAndWait()
                 print(" SYSTEM: ")
-                def chrome():
+                def run_chrome():
                     if platform.system() == "Windows":
                         system('start chrome')
                     if platform.system() == "Linux":
                         system('chromium-browser > /dev/null 2>&1')
-                chrome()
+                run_chrome()
             elif command == "chrome -i": # URUCHAMIA GOOGLE CHROME W TRYBIE INCOGNITO
                 print(" EVA: Uruchamiam program 'Google Chrome' w trybie incognito")
                 if engine == pyttsx3.init():
                     engine.say("Uruchamiam program google chrome w trybie incognito")
                     engine.runAndWait()
                 print(" SYSTEM: ")
-                def chrome_incognito():
+                def run_chrome_incognito():
                     if platform.system() == "Windows":
                         system('start chrome --incognito')
                     if platform.system() == "Linux":
                         system('chromium-browser --incognito > /dev/null 2>&1')
-                chrome_incognito()
+                run_chrome_incognito()
             elif command == "firefox":
                 print(" EVA: Uruchamiam program 'Firefox'") # URUCHAMIA FIREFOX
                 if engine == pyttsx3.init():
                     engine.say("Uruchamiam program firefox")
                     engine.runAndWait()
-                def firefox():
+                def run_firefox():
                     if platform.system() == "Windows":
                         system('start firefox')
                     if platform.system() == "Linux":
                         system('firefox > /dev/null 2>&1')
-                firefox_handler = threading.Thread(target=firefox)
+                firefox_handler = threading.Thread(target=run_firefox)
                 firefox_handler.start()
             elif command == "firefox -i": # URUCHAMIA FIREFOX W TRYBIE INCOGNITO
-                def firefox_incognito():
+                def run_firefox_incognito():
                     print(" EVA: Uruchamiam program 'Firefox' w trybie incognito")
                     if engine == pyttsx3.init():
                         engine.say("Uruchamiam program firefox w trybie incognito")
@@ -297,29 +297,31 @@ def eva_main_core(user):
                         system('start firefox -private-window')
                     if platform.system() == "Linux":
                         system('firefox -private-window > /dev/null 2>&1')
-                firefox_incognito_handler = threading.Thread(target=firefox_incognito)
+                firefox_incognito_handler = threading.Thread(target=run_firefox_incognito)
                 firefox_incognito_handler.start()
             elif command == "map": # URUCHAMIA MAPY GOOGLE W TRYBIE INCOGNITO
-                def start_gmap():
+                def run_google_map():
                     print("EVA: Uruchamiam Mapy Google w trybie incognito")
                     if engine == pyttsx3.init():
                         engine.say("Uruchamiam mapy gogle w trybie incongito")
                         engine.runAndWait()
                     if platform.system() == "Windows":
-                        _runBrowserCommand1 = 'start firefox.exe -private-window www.google.com/maps > nul 2>&1'
-                        process = subprocess.Popen(_runBrowserCommand1, shell=True, stdout=subprocess.PIPE)
+                        _runBrowserCommand = 'start firefox.exe -private-window www.google.com/maps > nul 2>&1'
+                        process = subprocess.Popen(_runBrowserCommand, shell=True, stdout=subprocess.PIPE)
                         process.wait()
                         _returnCode = process.returncode
                         if (_returnCode == 0):
                             pass
                         if (_returnCode == 1):
-                            _runBrowserCommand1 = 'start chrome.exe www.google.com\maps --incognito'
-                            process = subprocess.Popen(_runBrowserCommand1, shell=True, stdout=subprocess.PIPE)
+                            _runBrowserCommand = 'start chrome.exe www.google.com\maps --incognito'
+                            process = subprocess.Popen(_runBrowserCommand, shell=True, stdout=subprocess.PIPE)
                             process.wait()
                             _returnCode = process.returncode
+                            if (_returnCode == 1):
+                                pass
                     if platform.system() == "Linux":
                         system('chromium-browser www.google.com/maps --incognito > /dev/null 2>&1||firefox -private-window www.google.com/maps > /dev/null 2>&1')
-                gmap_handler = threading.Thread(target=start_gmap)
+                gmap_handler = threading.Thread(target=run_google_map)
                 gmap_handler.start()
             elif command == "cmd": # URUCHAMIA INTERPRETERA POLECEŃ SYSTEMU WINDOWS
                 print(" EVA: Uruchamiam interpreter poleceń systemu WINDOWS")
@@ -537,7 +539,7 @@ def eva_main_core(user):
         print(" EVA: Wystąpił problem z rozpoznawaniem dźwięku (TypeError)")
         engine.say("Wystąpił problem z rozpoznawaniem dźwięku")
         engine.runAndWait()
-        eva_main_core(user)
+        evaMainCore(user)
     except KeyboardInterrupt:
         print("")
         print(" EVA: Znikam. Użyto Ctrl + C")
