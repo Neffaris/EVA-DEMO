@@ -509,10 +509,11 @@ def eva_main_core(user):
                 print(" EVA: Wersja/Version: 1.0\LINUX/WINDOWS")
                 print("")
                 continue
-            elif command == "": # USUNĄĆ JEŚLI SPRAWIA PROBLEMY
+            elif command == "": # KLIKNIĘCIE ENTER BEZ WPISANIA POLECENIA WYŚWIETLA AKTUALNY CZAS I DATĘ
                 print ("\033[A                             \033[A") # USUWA LINIJKĘ TEKSTU TERMINALA WYŚWIETLAJĄCĄ CZAS I DATĘ
                 print ("\033[A                             \033[A") # USUWA PUSTĄ LINIJKĘ
                 print ("\033[A                             \033[A") # USUWA OSTATNIĄ LINIJKĘ TEKSTU TERMINALA TZN: "(user >|)"
+                # TRZY POWYŻSZE LINIJKI POTRZEBNE SĄ ABY PO WCIŚNIĘCIU KLAWISZA ENTER BEZ PODANIA POLECENIA NIE WYŚWIETLAŁA SIĘ KOLEJNA PUSTA LINIJKA OCZEKUJĄCA NA POLECENIE
             #elif
             else :  # ELSE
                 if is_listening == True: # SPRAWDZA CZY POLECENIE GŁOSOWE JEST POPRAWNE
