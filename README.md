@@ -16,7 +16,9 @@ Inspiracją do stworzenia EVA był program ukazany w filmie Gry Wojenne z 1983, 
 
 W przyszłości chciałbym przebudować program aby wykorzystywał algorytmy uczenia maszynowego ale jak już wspomniałem program rozwijam w wolnym czasie z czystej zajawki oraz w celach naukowych i możliwe, że przestanę go rozwijać
 
-Proces instalacji:
+Proces instalacji/wymagania:
+
+Python w wersji 3(Testowane na 3.10)
 
 Nazwy pakietów wymaganych do poprawnego działania programu znajdują się w pliku "requirements.txt"
 
@@ -38,7 +40,9 @@ The inspiration to create EVA was the program shown in the War Games movie from 
 
 In the future, I would like to rebuild the program to use machine learning algorithms, but as I mentioned, I develop the program in my free time for fun and for scientific purposes. So it is possible that i stop developing it
 
-Installation process:
+Installation process/requirements:
+
+Python version 3(Tested on 3.10)
 
 All additional required packages names are listed in "requirements.txt"
 
